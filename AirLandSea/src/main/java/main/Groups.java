@@ -31,6 +31,7 @@ public class Groups {
 	
 	public static void readCommand() throws invalidInputException{
 		
+		@SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in); 
 		System.out.println("Type \"Add, Remove, Display, or Log\"");
 		String input = reader.nextLine();
@@ -59,6 +60,7 @@ public class Groups {
 		try{
 		Team.displayLog();
 		System.out.println("Press Enter key to continue...");
+		@SuppressWarnings({ "unused", "resource" })
 		Scanner reader = new Scanner(System.in);
 		}catch(NullPointerException e){
 			System.out.println("Something Went Wrong!");
@@ -93,6 +95,7 @@ public class Groups {
 		
 		 
 		
+		@SuppressWarnings("resource")
 		Scanner inputData = new Scanner(System.in);
 		System.out.println("Type the name you would like to remove");
 		String removeMember = inputData.nextLine();
@@ -128,10 +131,10 @@ public class Groups {
 	}
 	
 	public static void addTeamMember() throws invalidInputException{
-		Boolean match = true;
-		//int x2 = allTeam.length - 1;
+
 		int x2 = 0;
 		
+		@SuppressWarnings("resource")
 		Scanner inputData = new Scanner(System.in);
 		System.out.println("Type Team Members Name");
 		String inputMember = inputData.nextLine();
@@ -211,7 +214,8 @@ public class Groups {
 		}
 	}
 			 
-			 public static void addAir(int x, String inputMember, int x3) throws invalidInputException{
+			 @SuppressWarnings("static-access")
+			public static void addAir(int x, String inputMember, int x3) throws invalidInputException{
 				
 				 try{
 				
@@ -229,7 +233,8 @@ public class Groups {
 				 
 			 }
 			 
-			 public static void addLand(int x, String inputMember, int x3) throws invalidInputException{
+			 @SuppressWarnings("static-access")
+			public static void addLand(int x, String inputMember, int x3) throws invalidInputException{
 				 
 				
 				 
@@ -250,7 +255,8 @@ public class Groups {
 				 
 			 }
  
- public static void addSea(int x, String inputMember, int x3) throws invalidInputException{
+ @SuppressWarnings("static-access")
+public static void addSea(int x, String inputMember, int x3) throws invalidInputException{
 	 
 	
 	 
